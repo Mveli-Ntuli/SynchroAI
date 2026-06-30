@@ -77,7 +77,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SynchroAI: Intelligent Workplace Assistant" },
+      { title: "Lovable App" },
       {
         name: "description",
         content:
@@ -87,6 +87,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "SynchroAI" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Lovable App" },
+      { name: "twitter:title", content: "Lovable App" },
+      { name: "description", content: "Build and customize basic landing pages with ease." },
+      { property: "og:description", content: "Build and customize basic landing pages with ease." },
+      { name: "twitter:description", content: "Build and customize basic landing pages with ease." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/95379f55-e5b1-4f11-a797-3d49cd03a7df/id-preview-d72c152f--c603e3d6-eae2-4f98-a191-4ebcb56b07c4.lovable.app-1782827882403.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/95379f55-e5b1-4f11-a797-3d49cd03a7df/id-preview-d72c152f--c603e3d6-eae2-4f98-a191-4ebcb56b07c4.lovable.app-1782827882403.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
