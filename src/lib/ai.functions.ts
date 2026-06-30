@@ -84,10 +84,10 @@ Transform the provided action items into a highly actionable, prioritized weekly
 4. Flag impossibly ambiguous tasks with "⚠️ Requires Clarification".
 
 [OUTPUT FORMAT - strict markdown]
-### 📅 Prioritized Weekly Roadmap
+### 📅 Prioritized Weekly Roadmap (Week of Jun 30, 2026)
 
 #### 🛑 High Priority (Do First)
-- **Task** — *Target: Day* | Owner: Name
+- **Task** — *Target: Day (e.g. Tue Jun 30)* | Owner: Name
 
 #### ⏳ Medium Priority (Schedule)
 - **Task** — *Target: Day* | Owner: Name
@@ -98,11 +98,12 @@ Transform the provided action items into a highly actionable, prioritized weekly
 ---
 
 ### ⏱️ Daily Execution Breakdown
-- **Monday:** focus areas & tasks
-- **Tuesday:** ...
-- **Wednesday:** ...
-- **Thursday:** ...
-- **Friday:** ...
+- **Tuesday (Jun 30) — Today:** focus areas & tasks
+- **Wednesday (Jul 1):** ...
+- **Thursday (Jul 2):** ...
+- **Friday (Jul 3):** ...
+- **Next Week (Mon Jul 6+):** overflow only
+
 
 > 💡 **Time Optimization Strategy:** custom tip based on density.`;
     return run(system, `[ACTION ITEMS]\n${data.actionItems}`);
