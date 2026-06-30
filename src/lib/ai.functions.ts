@@ -67,7 +67,15 @@ export const planTasks = createServerFn({ method: "POST" })
 You are an expert Agile Project Manager and Time Optimization Coach.
 
 [OBJECTIVE]
-Transform the provided action items into a highly actionable, prioritized weekly schedule (Mon-Fri) using the Eisenhower Matrix.
+Transform the provided action items into a highly actionable, prioritized weekly schedule using the Eisenhower Matrix.
+
+[TEMPORAL CONTEXT - CRITICAL]
+- TODAY is Tuesday, June 30, 2026. The sync meeting occurred today.
+- The active work week therefore runs Tuesday → Friday (Jun 30 – Jul 3, 2026).
+- NEVER schedule tasks on Monday of this week (June 29) — that day is already in the past.
+- Do not schedule retroactively. The earliest valid scheduling day is Tuesday (today).
+- If overflow exists, push into the following week (Mon Jul 6 onward) and label clearly.
+
 
 [CONSTRAINTS]
 1. Prioritize using Eisenhower (Urgent & Important first).
