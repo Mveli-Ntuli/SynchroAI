@@ -67,7 +67,15 @@ export const planTasks = createServerFn({ method: "POST" })
 You are an expert Agile Project Manager and Time Optimization Coach.
 
 [OBJECTIVE]
-Transform the provided action items into a highly actionable, prioritized weekly schedule (Mon-Fri) using the Eisenhower Matrix.
+Transform the provided action items into a highly actionable, prioritized weekly schedule using the Eisenhower Matrix.
+
+[TEMPORAL CONTEXT - CRITICAL]
+- TODAY is Tuesday, June 30, 2026. The sync meeting occurred today.
+- The active work week therefore runs Tuesday → Friday (Jun 30 – Jul 3, 2026).
+- NEVER schedule tasks on Monday of this week (June 29) — that day is already in the past.
+- Do not schedule retroactively. The earliest valid scheduling day is Tuesday (today).
+- If overflow exists, push into the following week (Mon Jul 6 onward) and label clearly.
+
 
 [CONSTRAINTS]
 1. Prioritize using Eisenhower (Urgent & Important first).
@@ -76,10 +84,10 @@ Transform the provided action items into a highly actionable, prioritized weekly
 4. Flag impossibly ambiguous tasks with "⚠️ Requires Clarification".
 
 [OUTPUT FORMAT - strict markdown]
-### 📅 Prioritized Weekly Roadmap
+### 📅 Prioritized Weekly Roadmap (Week of Jun 30, 2026)
 
 #### 🛑 High Priority (Do First)
-- **Task** — *Target: Day* | Owner: Name
+- **Task** — *Target: Day (e.g. Tue Jun 30)* | Owner: Name
 
 #### ⏳ Medium Priority (Schedule)
 - **Task** — *Target: Day* | Owner: Name
@@ -90,11 +98,12 @@ Transform the provided action items into a highly actionable, prioritized weekly
 ---
 
 ### ⏱️ Daily Execution Breakdown
-- **Monday:** focus areas & tasks
-- **Tuesday:** ...
-- **Wednesday:** ...
-- **Thursday:** ...
-- **Friday:** ...
+- **Tuesday (Jun 30) — Today:** focus areas & tasks
+- **Wednesday (Jul 1):** ...
+- **Thursday (Jul 2):** ...
+- **Friday (Jul 3):** ...
+- **Next Week (Mon Jul 6+):** overflow only
+
 
 > 💡 **Time Optimization Strategy:** custom tip based on density.`;
     return run(system, `[ACTION ITEMS]\n${data.actionItems}`);
@@ -126,12 +135,18 @@ Draft a perfectly tailored professional email based on input, adapting tone and 
 2. Tone must strictly match the requested tone.
 3. Privacy: never invent real names, financial figures, or credentials. Use [Bracketed Placeholders] for missing data.
 4. Keep body under 220 words.
+5. SIGN-OFF: Always close the email exactly with:
+   Best regards,
+   [Sender Name]
+   Do NOT invent a sender name, job title, role, department, or company. Never sign as "Corporate Communications Specialist" or any other title.
 
 [OUTPUT FORMAT - strict markdown]
 **Subject:** <one compelling line>
 
 **Body:**
-<polished email text>`;
+<polished email text ending with:
+Best regards,
+[Sender Name]>`;
     const prompt = `[AUDIENCE]: ${data.audience}
 [TONE]: ${data.tone}
 [CORE CONTEXT / TASKS]:

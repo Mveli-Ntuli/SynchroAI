@@ -124,3 +124,26 @@
   }
   & hr { border: 0; border-top: 1px dashed var(--color-border); margin: 1em 0; }
 }
+
+@utility prose-output-interactive {
+  & table tbody tr {
+    transition: background-color 180ms ease, transform 180ms ease;
+  }
+  & table tbody tr:hover {
+    background-color: color-mix(in oklab, var(--color-accent) 12%, transparent);
+  }
+  & table tbody td {
+    transition: color 180ms ease;
+  }
+  & table tbody tr:hover td {
+    color: var(--color-foreground);
+  }
+  & ul li, & ol li {
+    transition: color 180ms ease, transform 180ms ease;
+  }
+  & ul li:hover, & ol li:hover {
+    color: var(--color-primary);
+    transform: translateX(2px);
+  }
+}
+
