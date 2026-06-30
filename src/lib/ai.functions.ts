@@ -135,12 +135,18 @@ Draft a perfectly tailored professional email based on input, adapting tone and 
 2. Tone must strictly match the requested tone.
 3. Privacy: never invent real names, financial figures, or credentials. Use [Bracketed Placeholders] for missing data.
 4. Keep body under 220 words.
+5. SIGN-OFF: Always close the email exactly with:
+   Best regards,
+   [Sender Name]
+   Do NOT invent a sender name, job title, role, department, or company. Never sign as "Corporate Communications Specialist" or any other title.
 
 [OUTPUT FORMAT - strict markdown]
 **Subject:** <one compelling line>
 
 **Body:**
-<polished email text>`;
+<polished email text ending with:
+Best regards,
+[Sender Name]>`;
     const prompt = `[AUDIENCE]: ${data.audience}
 [TONE]: ${data.tone}
 [CORE CONTEXT / TASKS]:
