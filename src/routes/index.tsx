@@ -35,12 +35,32 @@ import { summarizeNotes, planTasks, draftEmail } from "@/lib/ai.functions";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Flowline — AI Productivity Assistant" },
+      { title: "SynchroAI: Intelligent Workplace Assistant" },
       {
         name: "description",
         content:
-          "Turn messy meeting notes into a prioritized weekly plan and a polished email — in three guided steps.",
+          "Summarize meetings, plan your week, and draft smart follow-up emails — all in one guided AI workspace.",
       },
+      { property: "og:title", content: "SynchroAI: Intelligent Workplace Assistant" },
+      {
+        property: "og:description",
+        content:
+          "Meeting Summarizer • Task Planner • Smart Email Generator — your intelligent workplace assistant.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://id-preview--c603e3d6-eae2-4f98-a191-4ebcb56b07c4.lovable.app/" },
+      { property: "og:image", content: "https://id-preview--c603e3d6-eae2-4f98-a191-4ebcb56b07c4.lovable.app/og-image.jpg" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "SynchroAI: Intelligent Workplace Assistant" },
+      {
+        name: "twitter:description",
+        content:
+          "Meeting Summarizer • Task Planner • Smart Email Generator.",
+      },
+      { name: "twitter:image", content: "https://id-preview--c603e3d6-eae2-4f98-a191-4ebcb56b07c4.lovable.app/og-image.jpg" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://id-preview--c603e3d6-eae2-4f98-a191-4ebcb56b07c4.lovable.app/" },
     ],
   }),
   component: Home,
