@@ -2,6 +2,8 @@
 
 Signet (derived from the historical *signet ring* used to seal trust, representing **"Sign on the Internet"**) is a high-performance, secure, and responsive web application designed to eliminate paper-based workflows. By utilizing native browser vector mechanics, robust multi-state persistence, and compliant cryptographic principles, Signet delivers an elegant, high-precision document execution environment.
 
+Test HERE: https://hello-world-spark-0896.lovable.app
+
 ## 🚀 Key Impact
 * **Latency Reduction:** Compiles and flattens complex PDF annotations in under 150ms using non-blocking rendering queues.
 * **Zero Data Loss:** Maintains 100% session integrity across network drops or tab closures using a dual-tier offline storage engine.
